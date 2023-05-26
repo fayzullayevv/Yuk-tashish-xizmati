@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyurtmalaringiz</title>
+  <style>
+    img{
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mashina nomi:{{obj.mashina}}</h1>
+  <img src="{{obj.rasm.url}}" alt="">
+  <h3>Mashina soatiga {{obj.narxi}}ming so'm</h3>
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <input type="text" placeholder="Manzildan" name="Location">
+
+    <input type="text" placeholder="Manzilga" name="To destination">
+
+    <input type="text" placeholder="Email" name="Email">
+
+    <input type="tel" placeholder="Telegon raqam" name="Contact Number">
+
+    <button type="submit">Buyurtma Berish</button>
+  </form>
+</body>
+</html>
